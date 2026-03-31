@@ -1,8 +1,8 @@
 ---
 title: "L01 Review"
 subtitle: "Data Science 3 with R (STAT 301-3)"
-author: "YOUR NAME"
-pagetitle: "L01 YOUR NAME"
+author: "Danielle Jing"
+pagetitle: "L01 Danielle Jing"
 date: today
 
 format:
@@ -26,9 +26,7 @@ citation-location: margin
 ::: {.callout-tip icon="false"}
 ## Github Repo Link
 
-To link to your github **repo**sitory, appropriately edit the example link below. Meaning replace `https://your-github-repo-url` with your github repo url. Suggest verifying the link works before submitting.
-
-[https://your-github-repo-url](https://your-github-repo-url)
+[Danielle's Repo Link](https://github.com/stat301-3-2026-spring/l01-review-daniellejing2027.git)
 :::
 
 ## Overview
@@ -57,7 +55,7 @@ Explain the difference between supervised and unsupervised learning.
 ::: {.callout-tip icon="false"}
 ## Solution
 
-YOUR SOLUTION HERE
+In supervised learning, there is an outcome, a prediction, or target response variable. Data is structured as the target variable (y) and predictor variables (x). In unsupervised learning, there is no outcome/response var, and the goal is to detect patterns in data automatically. The goal isn’t to predict something, it is to learn about patterns in variable x. This variable x is not linked to any type of target variable y. An example of unsupervised learning is clustering. 
 
 :::
 
@@ -70,7 +68,7 @@ In general, we can classify a model by its purpose into 1 of the 3 categories be
 ::: {.callout-tip icon="false"}
 ## Solution
 
-YOUR SOLUTION HERE
+The goal of descriptive models is to describe or illustrate characteristics of some data. Often, the intention is to visually emphasize some trend or artifact of data. E.g. geom_smooth() in scatterplots. 
 
 :::
 
@@ -79,7 +77,8 @@ YOUR SOLUTION HERE
 ::: {.callout-tip icon="false"}
 ## Solution
 
-YOUR SOLUTION HERE
+The goal is to produce a decision for a research question or to test a hypothesis. The model greatly depends on the underlying assumptions.
+E.g. whether predictor x1 is important in modeling y. 
 
 :::
 
@@ -88,7 +87,7 @@ YOUR SOLUTION HERE
 ::: {.callout-tip icon="false"}
 ## Solution
 
-YOUR SOLUTION HERE
+The goal for predictive models is to produce the most accurate prediction possible for new data. 
 
 :::
 
@@ -103,7 +102,10 @@ What does it mean to be a mechanistic model?
 ::: {.callout-tip icon="false"}
 ## Solution
 
-YOUR SOLUTION HERE
+A mechanistic, or parametric model, assumes that f(x) follows some known form/equation. E.g. y = B0 + b1x1 + b2x2 + e (aka linear regression)
+These models estimate a set of parameters (the betas).
+Pros: easy to understand, interpret. Fast. doesn't require a lot of data 
+Cons: model form/equation may be a poor fit, limited complexity  
 
 :::
 
@@ -114,7 +116,9 @@ What does it mean to be an empirically driven model?
 ::: {.callout-tip icon="false"}
 ## Solution
 
-YOUR SOLUTION HERE
+An empirically driven model, or a non-parametric model, makes no assumptions about the form of f(x). It uses specific observations and characteristics from data 
+Pros: Flexible, better predictive performance and power
+Cons: need more observations, longer training time, higher risk of overfitting
 
 :::
 
@@ -191,7 +195,7 @@ Briefly describe how v-fold cross validation with repeats is used to estimate te
 ::: {.callout-tip icon="false"}
 ## Solution
 
-YOUR SOLUTION HERE
+In v-fold cross validation, data is randomly partitioned into V sets (folds) of roughly equal size. Repeated cross-validation “repeats” the process R times. The model is fit on V - 1 folds and then performance metrics are evaluated on the remaining fold. This process is iterated until all folds have served as the assessment set. The final performance measure would be the average RMSE over V folds. The repeats are for reducing variance. If you have 5 folds and 3 repeats, you should have 15 total fits. The choice for your number of folds and repeats is also based on the bias-variance trade off (and also computation time, if you have a really large dataset). The reason why v-fold cross validation is used is because it mimics the training & testing set, and ensures you're not EVALUATING on same data you TUNED on. This reduces bias/overfitting, simulating how the model performs on new/unseen data. 
 
 :::
 
