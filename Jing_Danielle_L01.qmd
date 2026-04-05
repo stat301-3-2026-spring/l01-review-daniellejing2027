@@ -192,7 +192,8 @@ When splitting the data, why is it useful to stratify by the outcome/target vari
 ::: {.callout-tip icon="false"}
 ## Solution
 
-Stratifying by the outcome/target variable makes sure that the distribution of the target variable is similar across the training and testing datasets. This is particularly important when the distribution of the outcome variable is imbalanced, as it prevents one split from having disproportionately more (or fewer) observations of certain outcome values. This helps with better predictive performance. 
+Stratifying by the outcome/target variable makes sure that the distribution of the target variable is similar across the training and testing datasets. This is particularly important when the distribution of the outcome variable is imbalanced, as it prevents one split from having disproportionately more (or fewer) observations of certain outcome values. This helps with more reliable estimates of model performance.
+
 :::
 
 ### Question 7 
@@ -228,7 +229,7 @@ Briefly describe model tuning and why we use it.
 ::: {.callout-tip icon="false"}
 ## Solution
 
-Model tuning involves selecting the optimal hyperparameters that improve model performance. A hyperparameter is a setting of a model before training begins and is part of the model learning process (trees, mtry, penalty, neighbors, etc.). To tune, you test candidate values with a grid with ranges for each hyperparameter, and select the tuning parameters that provide optimal performance. We use tuning to find the best combination of settings that minimizes error on a given metric (e.g., RMSE), helping the model generalize better to new, unseen data.
+Model tuning involves selecting the optimal hyperparameters that improve model performance. A hyperparameter is a setting of a model before training begins and is part of the model learning process (trees, mtry, penalty, neighbors, etc.). To tune, you test candidate values with a grid with ranges for each hyperparameter, and select the tuning parameters that provide optimal performance. We use tuning to find the best combination of settings that minimizes error on a given metric (e.g., RMSE) on validation data, helping the model generalize better to new, unseen data.
 
 :::
 
