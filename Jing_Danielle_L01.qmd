@@ -170,6 +170,8 @@ Describe the bias-variance trade-off when considering the use of a mechanistic o
 
 Mechanistic models tend to have **higher bias and lower variance** because their structure can oversimplify the true relationships in the data. Empirically driven models and more flexible models tend to have **lower bias and higher variance** because they can closely fit the data but can also overfit to a particular dataset and perform poorly on new, unseen data. The bias variance trade-off involves balancing model bias (simplicity) and variance (flexibility) to obtain optimized predictive performance.
 
+![Bias Variance Trade Off](photos/biasvariance.png){width=80%}
+
 :::
 
 ### Question 5 
@@ -203,6 +205,8 @@ Briefly describe how v-fold cross validation with repeats is used to estimate te
 In v-fold cross validation, data is randomly partitioned into V sets (folds) of roughly equal size. Repeated cross-validation “repeats” the process R times. The model is fit on V - 1 folds and then performance metrics are evaluated on the remaining fold. This process is iterated until all folds have served as the assessment set. The final performance measure would be the average RMSE over V folds. The repeats are for reducing variance. If you have 5 folds and 3 repeats, you should have 15 total fits. The choice for your number of folds and repeats is also based on the bias-variance trade off (and also computation time, if you have a really large dataset). 
 
 The reason why v-fold cross validation is used is because it mimics the training & testing set, and ensures you're not EVALUATING on same data you TUNED on. This reduces bias/overfitting by simulating how the model performs on new/unseen data. 
+
+![V-fold Cross Validation](photos/vfold.png){width=60%}
 
 :::
 
@@ -246,7 +250,10 @@ What are two common performance metrics when dealing with a classification ML pr
 ## Solution
 
 Two common metrics are: **Accuracy** and **ROC-AUC**. 
-Accuracy is the ratio of correct predictions (both positive and negative) to the total number of input samples, expressed as a percentage or fraction. ROC AUC can be interpreted as the probability that a classifier will rank a randomly chosen positive instance higher than a randomly chosen negative one (assuming ‘positive’ ranks higher than ‘negative’).
+Accuracy is the ratio of correct predictions (both positive and negative) to the total number of predictions, expressed as a percentage or fraction. ROC AUC is the Area Under the ROC Curve (a one-number summary of the ROC curve). It can be interpreted as the probability that a classifier will rank a randomly chosen positive instance higher than a randomly chosen negative one (assuming ‘positive’ ranks higher than ‘negative’).
+
+![ROC Curve](photos/roc.png){width=60%}
+
 
 :::
 
