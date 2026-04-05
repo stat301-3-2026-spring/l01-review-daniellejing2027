@@ -2245,7 +2245,18 @@ Solution
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>YOUR SOLUTION HERE</p>
+<ol type="1">
+<li><strong>Define the problem</strong> - Identify the outcome variable (y) and potential predictor variables (x). Determine whether the task is regression or classification.</li>
+<li><strong>Prepare and explore the data</strong> - Gather the data, clean it, handle missing values, variable typing, or if any major transformations need to be done. Fix major data issues. Explore how many variables and observations are valid for use (informs splitting decisions as well).</li>
+<li><strong>Split the data</strong> - Divide the dataset into training and testing sets. Stratify by outcome variable. For v-fold cross validation, choose an appropiate number of folds and repeats for dataset size.</li>
+<li><strong>Preprocess the data</strong> - Conduct a brief EDA to explore variable relationships using the training dataset. Using these insights, apply transformations and feature engineering (e.g., normalization, dummy encoding, interactions, imputations, etc.) using a recipe. Can also use a kitchen sink recipe alongside the feature engineered recipe in order to see the effect of the feature engineered steps on predictive accuracy.<br>
+</li>
+<li><strong>Choose models</strong> - Select appropriate models (e.g., linear regression, random forest, elastic net) to fit the training datasets.</li>
+<li><strong>Tune hyperparameters</strong> - Use resampling methods (like v-fold cross validation) to create a tuning hyperparameter grid with appropiate hyperparameter ranges for each model.</li>
+<li><strong>Model fitting</strong> - Fit each model type using their respective hyperparameter tuning grids and save the models to project directory.</li>
+<li><strong>Evaluate model performance</strong> - Assess and compare model performance using chosen metrics (e.g., RMSE, accuracy). This step also invovles analysis of autoplots, where you can ascertain whether appropriate hyperparameter tuning tanges were chosen. Once the model with the best performance is identified, extract the workflow with the optimal hyperparameter settings and save this as the final model to be used on the testing dataset.</li>
+<li><strong>Finalize the model</strong> - Fit the best model with optimal hyperparameters on the full training dataset, then evaluate its performance on the unseen testing dataset. Evaluate the results using appropriate metrics and graphs depending on problem type (regression or classification).</li>
+</ol>
 </div>
 </div>
 </section>
@@ -2281,7 +2292,7 @@ Solution
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The goal of descriptive models is to describe or illustrate characteristics of some data. Often, the intention is to visually emphasize some trend or artifact of data. E.g. geom_smooth() in scatterplots.</p>
+<p>The goal of descriptive models is to <strong>describe or illustrate characteristics</strong> of some data. Often, the intention is to visually emphasize some trend or artifact of data. E.g. geom_smooth() in scatterplots.</p>
 </div>
 </div>
 </section>
@@ -2297,7 +2308,7 @@ Solution
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The goal is to produce a decision for a research question or to test a hypothesis. The model greatly depends on the underlying assumptions. E.g. whether predictor x1 is important in modeling y.</p>
+<p>The goal is to produce a <strong>decision for a research question or to test a hypothesis</strong>. The model greatly depends on the underlying assumptions. E.g. whether predictor x1 is important in modeling y.</p>
 </div>
 </div>
 </section>
@@ -2313,7 +2324,7 @@ Solution
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The goal for predictive models is to produce the most accurate prediction possible for new data.</p>
+<p>The goal for predictive models is to produce the <strong>most accurate prediction</strong> possible for new data.</p>
 </div>
 </div>
 </section>
@@ -2334,7 +2345,7 @@ Solution
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>A mechanistic model assumes that f(x) follows some known form/equation. E.g. y = B0 + b1x1 + b2x2 + e (aka linear regression). These models estimate a set of parameters (the betas). Pros: easy to understand, interpret. Fast. doesn’t require a lot of data. Cons: model form/equation may be a poor fit, limited complexity.</p>
+<p>A mechanistic model assumes that f(x) follows some <strong>known form/equation</strong>. E.g. y = B0 + b1x1 + b2x2 + e (aka linear regression). These models estimate a set of parameters (the betas). Pros: easy to understand, interpret. Fast. doesn’t require a lot of data. Cons: model form/equation may be a poor fit, limited complexity.</p>
 </div>
 </div>
 </section>
@@ -2351,7 +2362,7 @@ Solution
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>An empirically driven model makes no assumptions about the form of f(x). It uses specific observations and characteristics from data. Pros: Flexible, better predictive performance and power. Cons: need more observations, longer training time, higher risk of overfitting.</p>
+<p>An empirically driven model makes no assumptions about the form of f(x). It uses <strong>specific observations and characteristics</strong> from data. Pros: Flexible, better predictive performance and power. Cons: need more observations, longer training time, higher risk of overfitting.</p>
 </div>
 </div>
 </section>
@@ -2368,7 +2379,7 @@ Solution
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Mechanistic models are parametric models and empirically driven models are nonparamentric models.</p>
+<p>Mechanistic models correspond to parametric models, which assume a specific functional form. Empirically driven models correspond to nonparametric models, which do not assume a fixed functional form and instead learn patterns directly from the data.</p>
 </div>
 </div>
 </section>
@@ -2385,7 +2396,7 @@ Solution
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>YOUR SOLUTION HERE</p>
+<p>In general, <strong>mechanistic (parametric) models</strong> are easier to interpret because they are simpler and defined (by coefficients in linear regression that show relationships between predictors and the outcome). Empirically driven models are often more complex and flexible, making them harder to interpret because they do not have a straightforward equation representing the relationships between the data.</p>
 </div>
 </div>
 </section>
@@ -2402,7 +2413,7 @@ Solution
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>YOUR SOLUTION HERE</p>
+<p>Empirically driven (nonparametric) models are <strong>more</strong> flexible because they do not assume a specific form that is representative by a function, and thus empirically driven models can adapt to complex patterns in the data. Mechanistic (parametric) models are <strong>less</strong> flexible because they are constrained by their predefined structure.</p>
 </div>
 </div>
 </section>
@@ -2419,7 +2430,7 @@ Solution
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>YOUR SOLUTION HERE</p>
+<p>Mechanistic models tend to have <strong>higher bias and lower variance</strong> because their structure can oversimplify the true relationships in the data. Empirically driven models and more flexible models tend to have <strong>lower bias and higher variance</strong> because they can closely fit the data but can also overfit to a particular dataset and perform poorly on new, unseen data. The bias variance trade-off involves balancing model bias (simplicity) and variance (flexibility) to obtain optimized predictive performance.</p>
 </div>
 </div>
 </section>
@@ -2437,7 +2448,7 @@ Solution
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>YOUR SOLUTION HERE</p>
+<p>Regression machine learning problems involve predicting a <strong>continuous</strong> numeric outcome variable (like price). Classification machine learning problems involve predicting a <strong>categorical</strong> outcome variable (like yes/no).</p>
 </div>
 </div>
 </section>
@@ -2454,7 +2465,7 @@ Solution
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>YOUR SOLUTION HERE</p>
+<p>Stratifying by the outcome/target variable makes sure that the distribution of the target variable is similar across the training and testing datasets. This is particularly important when the distribution of the outcome variable is imbalanced, as it prevents one split from having disproportionately more (or fewer) observations of certain outcome values. This helps with better predictive performance.</p>
 </div>
 </div>
 </section>
@@ -2471,7 +2482,8 @@ Solution
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>In v-fold cross validation, data is randomly partitioned into V sets (folds) of roughly equal size. Repeated cross-validation “repeats” the process R times. The model is fit on V - 1 folds and then performance metrics are evaluated on the remaining fold. This process is iterated until all folds have served as the assessment set. The final performance measure would be the average RMSE over V folds. The repeats are for reducing variance. If you have 5 folds and 3 repeats, you should have 15 total fits. The choice for your number of folds and repeats is also based on the bias-variance trade off (and also computation time, if you have a really large dataset). The reason why v-fold cross validation is used is because it mimics the training &amp; testing set, and ensures you’re not EVALUATING on same data you TUNED on. This reduces bias/overfitting, simulating how the model performs on new/unseen data.</p>
+<p>In v-fold cross validation, data is randomly partitioned into V sets (folds) of roughly equal size. Repeated cross-validation “repeats” the process R times. The model is fit on V - 1 folds and then performance metrics are evaluated on the remaining fold. This process is iterated until all folds have served as the assessment set. The final performance measure would be the average RMSE over V folds. The repeats are for reducing variance. If you have 5 folds and 3 repeats, you should have 15 total fits. The choice for your number of folds and repeats is also based on the bias-variance trade off (and also computation time, if you have a really large dataset).</p>
+<p>The reason why v-fold cross validation is used is because it mimics the training &amp; testing set, and ensures you’re not EVALUATING on same data you TUNED on. This reduces bias/overfitting by simulating how the model performs on new/unseen data.</p>
 </div>
 </div>
 </section>
@@ -2488,7 +2500,7 @@ Solution
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>YOUR SOLUTION HERE</p>
+<p>Bootstrap resampling may be more useful when working with <strong>small datasets</strong>, where splitting into folds may leave too little data for training. It is also helpful when we want to estimate the <strong>variability</strong> or uncertainty of model performance, as bootstrap repeatedly samples with replacement and provides a distribution of performance metrics.</p>
 </div>
 </div>
 </section>
@@ -2505,7 +2517,7 @@ Solution
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>YOUR SOLUTION HERE</p>
+<p>Model tuning involves selecting the optimal hyperparameters that improve model performance. A hyperparameter is a setting of a model before training begins and is part of the model learning process (trees, mtry, penalty, neighbors, etc.). To tune, you test candidate values with a grid with ranges for each hyperparameter, and select the tuning parameters that provide optimal performance. We use tuning to find the best combination of settings that minimizes error on a given metric (e.g., RMSE), helping the model generalize better to new, unseen data.</p>
 </div>
 </div>
 </section>
@@ -2522,7 +2534,7 @@ Solution
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>YOUR SOLUTION HERE</p>
+<p>Two common metrics are: <strong>RMSE (Root Mean Squared Error)</strong> and <strong>MAE (Mean Absolute Error)</strong>. Root Mean Square Error (RMSE) measures the average difference between predicted and actual values. RMSE calculates the square root of the average squared residuals. A lower RMSE indicates better predictive performance. The Mean Absolute Error (MAE)measures the average magnitude of errors in a set of predictions. It is the average of the absolute differences between actual and predicted values, representing how close predictions are to actual outcomes. A lower MAE means better model performance.</p>
 </div>
 </div>
 <p>What are two common performance metrics when dealing with a classification ML problem?</p>
@@ -2536,7 +2548,7 @@ Solution
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>YOUR SOLUTION HERE</p>
+<p>Two common metrics are: <strong>Accuracy</strong> and <strong>ROC-AUC</strong>. Accuracy is the ratio of correct predictions (both positive and negative) to the total number of input samples, expressed as a percentage or fraction. ROC AUC can be interpreted as the probability that a classifier will rank a randomly chosen positive instance higher than a randomly chosen negative one (assuming ‘positive’ ranks higher than ‘negative’).</p>
 </div>
 </div>
 </section>
@@ -2557,7 +2569,7 @@ Solution
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>YOUR SOLUTION HERE</p>
+<p>This is an <strong>inferential</strong> question because it is focused on understanding the relationship and effect of a predictor (number of service calls) on an outcome (churn). This question does not seek a prediction for future outcomes.</p>
 </div>
 </div>
 <ol start="2" type="1">
@@ -2573,7 +2585,7 @@ Solution
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>YOUR SOLUTION HERE</p>
+<p>This is a <strong>predictive</strong> question because the goal is to predict the probability that a customer will churn in the future, rather than explain why it happens like in the previous question.</p>
 </div>
 </div>
 </section>

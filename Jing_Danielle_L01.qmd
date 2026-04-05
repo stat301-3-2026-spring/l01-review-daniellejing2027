@@ -44,7 +44,15 @@ Provide a brief outline/overview of the steps involved in a supervised machine l
 ::: {.callout-tip icon="false"}
 ## Solution
 
-YOUR SOLUTION HERE
+1. **Define the problem** - Identify the outcome variable (y) and potential predictor variables (x). Determine whether the task is regression or classification.
+2. **Prepare and explore the data** - Gather the data, clean it, handle missing values, variable typing, or if any major transformations need to be done. Fix major data issues. Explore how many variables and observations are valid for use (informs splitting decisions as well).
+3. **Split the data** - Divide the dataset into training and testing sets. Stratify by outcome variable. For v-fold cross validation, choose an appropiate number of folds and repeats for dataset size. 
+4. **Preprocess the data** - Conduct a brief EDA to explore variable relationships using the training dataset. Using these insights, apply transformations and feature engineering (e.g., normalization, dummy encoding, interactions, imputations, etc.) using a recipe. Can also use a kitchen sink recipe alongside the feature engineered recipe in order to see the effect of the feature engineered steps on predictive accuracy.  
+5. **Choose models** - Select appropriate models (e.g., linear regression, random forest, elastic net) to fit the training datasets. 
+6. **Tune hyperparameters** - Use resampling methods (like v-fold cross validation) to create a tuning hyperparameter grid with appropiate hyperparameter ranges for each model.
+7. **Model fitting** - Fit each model type using their respective hyperparameter tuning grids and save the models to project directory. 
+8. **Evaluate model performance** - Assess and compare model performance using chosen metrics (e.g., RMSE, accuracy). This step also invovles analysis of autoplots, where you can ascertain whether appropriate hyperparameter tuning tanges were chosen. Once the model with the best performance is identified, extract the workflow with the optimal hyperparameter settings and save this as the final model to be used on the testing dataset. 
+9. **Finalize the model** - Fit the best model with optimal hyperparameters on the full training dataset, then evaluate its performance on the unseen testing dataset. Evaluate the results using appropriate metrics and graphs depending on problem type (regression or classification).
 
 :::
 
@@ -68,7 +76,7 @@ In general, we can classify a model by its purpose into 1 of the 3 categories be
 ::: {.callout-tip icon="false"}
 ## Solution
 
-The goal of descriptive models is to describe or illustrate characteristics of some data. Often, the intention is to visually emphasize some trend or artifact of data. E.g. geom_smooth() in scatterplots. 
+The goal of descriptive models is to **describe or illustrate characteristics** of some data. Often, the intention is to visually emphasize some trend or artifact of data. E.g. geom_smooth() in scatterplots. 
 
 :::
 
@@ -77,7 +85,7 @@ The goal of descriptive models is to describe or illustrate characteristics of s
 ::: {.callout-tip icon="false"}
 ## Solution
 
-The goal is to produce a decision for a research question or to test a hypothesis. The model greatly depends on the underlying assumptions. E.g. whether predictor x1 is important in modeling y. 
+The goal is to produce a **decision for a research question or to test a hypothesis**. The model greatly depends on the underlying assumptions. E.g. whether predictor x1 is important in modeling y. 
 
 :::
 
@@ -86,7 +94,7 @@ The goal is to produce a decision for a research question or to test a hypothesi
 ::: {.callout-tip icon="false"}
 ## Solution
 
-The goal for predictive models is to produce the most accurate prediction possible for new data. 
+The goal for predictive models is to produce the **most accurate prediction** possible for new data. 
 
 :::
 
@@ -101,7 +109,7 @@ What does it mean to be a mechanistic model?
 ::: {.callout-tip icon="false"}
 ## Solution
 
-A mechanistic model assumes that f(x) follows some known form/equation. E.g. y = B0 + b1x1 + b2x2 + e (aka linear regression). These models estimate a set of parameters (the betas).
+A mechanistic model assumes that f(x) follows some **known form/equation**. E.g. y = B0 + b1x1 + b2x2 + e (aka linear regression). These models estimate a set of parameters (the betas).
 Pros: easy to understand, interpret. Fast. doesn't require a lot of data.
 Cons: model form/equation may be a poor fit, limited complexity. 
 
@@ -114,7 +122,7 @@ What does it mean to be an empirically driven model?
 ::: {.callout-tip icon="false"}
 ## Solution
 
-An empirically driven model makes no assumptions about the form of f(x). It uses specific observations and characteristics from data.
+An empirically driven model makes no assumptions about the form of f(x). It uses **specific observations and characteristics** from data.
 Pros: Flexible, better predictive performance and power.
 Cons: need more observations, longer training time, higher risk of overfitting.
 
@@ -127,7 +135,7 @@ How does the mechanistic and empirically driven model terminology relate to the 
 ::: {.callout-tip icon="false"}
 ## Solution
 
-Mechanistic models are parametric models and empirically driven models are nonparamentric models. 
+Mechanistic models correspond to parametric models, which assume a specific functional form. Empirically driven models correspond to nonparametric models, which do not assume a fixed functional form and instead learn patterns directly from the data.
 
 :::
 
@@ -138,7 +146,7 @@ In general, is a mechanistic or empirically driven model easier to interpret? Ex
 ::: {.callout-tip icon="false"}
 ## Solution
 
-YOUR SOLUTION HERE
+In general, **mechanistic (parametric) models** are easier to interpret because they are simpler and defined (by coefficients in linear regression that show relationships between predictors and the outcome). Empirically driven models are often more complex and flexible, making them harder to interpret because they do not have a straightforward equation representing the relationships between the data.
 
 :::
 
@@ -149,7 +157,7 @@ How does mechanistic and empirically driven model terminology relate to the idea
 ::: {.callout-tip icon="false"}
 ## Solution
 
-YOUR SOLUTION HERE
+Empirically driven (nonparametric) models are **more** flexible because they do not assume a specific form that is representative by a function, and thus empirically driven models can adapt to complex patterns in the data. Mechanistic (parametric) models are **less** flexible because they are constrained by their predefined structure.
 
 :::
 
@@ -160,7 +168,7 @@ Describe the bias-variance trade-off when considering the use of a mechanistic o
 ::: {.callout-tip icon="false"}
 ## Solution
 
-YOUR SOLUTION HERE
+Mechanistic models tend to have **higher bias and lower variance** because their structure can oversimplify the true relationships in the data. Empirically driven models and more flexible models tend to have **lower bias and higher variance** because they can closely fit the data but can also overfit to a particular dataset and perform poorly on new, unseen data. The bias variance trade-off involves balancing model bias (simplicity) and variance (flexibility) to obtain optimized predictive performance.
 
 :::
 
@@ -171,7 +179,7 @@ Explain the difference between a regression and classification machine learning 
 ::: {.callout-tip icon="false"}
 ## Solution
 
-YOUR SOLUTION HERE
+Regression machine learning problems involve predicting a **continuous** numeric outcome variable (like price). Classification machine learning problems involve predicting a **categorical** outcome variable (like yes/no). 
 
 :::
 
@@ -182,8 +190,7 @@ When splitting the data, why is it useful to stratify by the outcome/target vari
 ::: {.callout-tip icon="false"}
 ## Solution
 
-YOUR SOLUTION HERE
-
+Stratifying by the outcome/target variable makes sure that the distribution of the target variable is similar across the training and testing datasets. This is particularly important when the distribution of the outcome variable is imbalanced, as it prevents one split from having disproportionately more (or fewer) observations of certain outcome values. This helps with better predictive performance. 
 :::
 
 ### Question 7 
@@ -193,7 +200,9 @@ Briefly describe how v-fold cross validation with repeats is used to estimate te
 ::: {.callout-tip icon="false"}
 ## Solution
 
-In v-fold cross validation, data is randomly partitioned into V sets (folds) of roughly equal size. Repeated cross-validation “repeats” the process R times. The model is fit on V - 1 folds and then performance metrics are evaluated on the remaining fold. This process is iterated until all folds have served as the assessment set. The final performance measure would be the average RMSE over V folds. The repeats are for reducing variance. If you have 5 folds and 3 repeats, you should have 15 total fits. The choice for your number of folds and repeats is also based on the bias-variance trade off (and also computation time, if you have a really large dataset). The reason why v-fold cross validation is used is because it mimics the training & testing set, and ensures you're not EVALUATING on same data you TUNED on. This reduces bias/overfitting, simulating how the model performs on new/unseen data. 
+In v-fold cross validation, data is randomly partitioned into V sets (folds) of roughly equal size. Repeated cross-validation “repeats” the process R times. The model is fit on V - 1 folds and then performance metrics are evaluated on the remaining fold. This process is iterated until all folds have served as the assessment set. The final performance measure would be the average RMSE over V folds. The repeats are for reducing variance. If you have 5 folds and 3 repeats, you should have 15 total fits. The choice for your number of folds and repeats is also based on the bias-variance trade off (and also computation time, if you have a really large dataset). 
+
+The reason why v-fold cross validation is used is because it mimics the training & testing set, and ensures you're not EVALUATING on same data you TUNED on. This reduces bias/overfitting by simulating how the model performs on new/unseen data. 
 
 :::
 
@@ -204,7 +213,7 @@ When might we use a bootstrap resampling procedure instead of v-fold cross valid
 ::: {.callout-tip icon="false"}
 ## Solution
 
-YOUR SOLUTION HERE
+Bootstrap resampling may be more useful when working with **small datasets**, where splitting into folds may leave too little data for training. It is also helpful when we want to estimate the **variability** or uncertainty of model performance, as bootstrap repeatedly samples with replacement and provides a distribution of performance metrics.
 
 :::
 
@@ -215,7 +224,7 @@ Briefly describe model tuning and why we use it.
 ::: {.callout-tip icon="false"}
 ## Solution
 
-YOUR SOLUTION HERE
+Model tuning involves selecting the optimal hyperparameters that improve model performance. A hyperparameter is a setting of a model before training begins and is part of the model learning process (trees, mtry, penalty, neighbors, etc.). To tune, you test candidate values with a grid with ranges for each hyperparameter, and select the tuning parameters that provide optimal performance. We use tuning to find the best combination of settings that minimizes error on a given metric (e.g., RMSE), helping the model generalize better to new, unseen data.
 
 :::
 
@@ -226,7 +235,8 @@ What are two common performance metrics when dealing with a regression ML proble
 ::: {.callout-tip icon="false"}
 ## Solution
 
-YOUR SOLUTION HERE
+Two common metrics are: **RMSE (Root Mean Squared Error)** and **MAE (Mean Absolute Error)**.
+Root Mean Square Error (RMSE) measures the average difference between predicted and actual values. RMSE calculates the square root of the average squared residuals. A lower RMSE indicates better predictive performance. The Mean Absolute Error (MAE)measures the average magnitude of errors in a set of predictions. It is the average of the absolute differences between actual and predicted values, representing how close predictions are to actual outcomes. A lower MAE means better model performance.
 
 :::
 
@@ -235,7 +245,8 @@ What are two common performance metrics when dealing with a classification ML pr
 ::: {.callout-tip icon="false"}
 ## Solution
 
-YOUR SOLUTION HERE
+Two common metrics are: **Accuracy** and **ROC-AUC**. 
+Accuracy is the ratio of correct predictions (both positive and negative) to the total number of input samples, expressed as a percentage or fraction. ROC AUC can be interpreted as the probability that a classifier will rank a randomly chosen positive instance higher than a randomly chosen negative one (assuming ‘positive’ ranks higher than ‘negative’).
 
 :::
 
@@ -250,7 +261,7 @@ A company with a subscription based service (for example Netflix, Disney+, New Y
 ::: {.callout-tip icon="false"}
 ## Solution
 
-YOUR SOLUTION HERE
+This is an **inferential** question because it is focused on understanding the relationship and effect of a predictor (number of service calls) on an outcome (churn). This question does not seek a prediction for future outcomes.
 
 :::
 
@@ -259,7 +270,7 @@ YOUR SOLUTION HERE
 ::: {.callout-tip icon="false"}
 ## Solution
 
-YOUR SOLUTION HERE
+This is a **predictive** question because the goal is to predict the probability that a customer will churn in the future, rather than explain why it happens like in the previous question. 
 
 :::
 
