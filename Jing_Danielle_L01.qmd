@@ -77,8 +77,7 @@ The goal of descriptive models is to describe or illustrate characteristics of s
 ::: {.callout-tip icon="false"}
 ## Solution
 
-The goal is to produce a decision for a research question or to test a hypothesis. The model greatly depends on the underlying assumptions.
-E.g. whether predictor x1 is important in modeling y. 
+The goal is to produce a decision for a research question or to test a hypothesis. The model greatly depends on the underlying assumptions. E.g. whether predictor x1 is important in modeling y. 
 
 :::
 
@@ -102,10 +101,9 @@ What does it mean to be a mechanistic model?
 ::: {.callout-tip icon="false"}
 ## Solution
 
-A mechanistic, or parametric model, assumes that f(x) follows some known form/equation. E.g. y = B0 + b1x1 + b2x2 + e (aka linear regression)
-These models estimate a set of parameters (the betas).
-Pros: easy to understand, interpret. Fast. doesn't require a lot of data 
-Cons: model form/equation may be a poor fit, limited complexity  
+A mechanistic model assumes that f(x) follows some known form/equation. E.g. y = B0 + b1x1 + b2x2 + e (aka linear regression). These models estimate a set of parameters (the betas).
+Pros: easy to understand, interpret. Fast. doesn't require a lot of data.
+Cons: model form/equation may be a poor fit, limited complexity. 
 
 :::
 
@@ -116,9 +114,9 @@ What does it mean to be an empirically driven model?
 ::: {.callout-tip icon="false"}
 ## Solution
 
-An empirically driven model, or a non-parametric model, makes no assumptions about the form of f(x). It uses specific observations and characteristics from data 
-Pros: Flexible, better predictive performance and power
-Cons: need more observations, longer training time, higher risk of overfitting
+An empirically driven model makes no assumptions about the form of f(x). It uses specific observations and characteristics from data.
+Pros: Flexible, better predictive performance and power.
+Cons: need more observations, longer training time, higher risk of overfitting.
 
 :::
 
@@ -129,7 +127,7 @@ How does the mechanistic and empirically driven model terminology relate to the 
 ::: {.callout-tip icon="false"}
 ## Solution
 
-YOUR SOLUTION HERE
+Mechanistic models are parametric models and empirically driven models are nonparamentric models. 
 
 :::
 
