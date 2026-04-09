@@ -63,10 +63,11 @@ Provide a brief outline/overview of the steps involved in a supervised machine l
 
 ::: {.callout-important icon="false"}
 ## Score 
+4
 
 ## Explanation
 
-5-4 points, little misunderstanding 
+No errors, but the steps could have cleaner delineations. Doesn't match the steps/organization in the solutions answer key, but all the content is correct. 
 
 :::
 
@@ -85,10 +86,11 @@ In supervised learning, there is an outcome, a prediction, or target response va
 
 ::: {.callout-important icon="false"}
 ## Score 
+4 
 
 ## Explanation
 
-5-4, no errors. 
+No errors, but could be a bit more expansive on the goal for supervised learning (fitting a model for predictions on unseen data). 
 
 :::
 
@@ -110,10 +112,11 @@ The goal of descriptive models is to **describe or illustrate characteristics** 
 ::: {.callout-important icon="false"}
 
 ## Score 
+5
 
 ## Explanation
 
-5 - no errors or misunderstandings. 
+No errors or misunderstandings. 
 
 :::
 
@@ -131,10 +134,11 @@ The goal is to produce a **decision for a research question or to test a hypothe
 ::: {.callout-important icon="false"}
 
 ## Score 
+5
 
 ## Explanation
 
-5 - no errors or misunderstandings. 
+No errors or misunderstandings. 
 
 :::
 
@@ -153,10 +157,11 @@ The goal for predictive models is to produce the **most accurate prediction** po
 ::: {.callout-important icon="false"}
 
 ## Score 
+5 
 
 ## Explanation
 
-5 - no errors or misunderstandings. 
+No errors or misunderstandings. 
 
 :::
 
@@ -183,13 +188,11 @@ Cons: model form/equation may be a poor fit, limited complexity.
 
 ## Score 
 
+5
+
 ## Explanation
 
-Explain the score. Clearly identify what your misunderstandings were. Explain why you believe this error/misunderstanding occurred.
-
-## Updated solution
-
-*Only required if a 3 or less is scored on the question.*
+No errors or misunderstandings. 
 
 :::
 
@@ -211,14 +214,17 @@ Cons: need more observations, longer training time, higher risk of overfitting.
 ::: {.callout-important icon="false"}
 
 ## Score 
+3 
 
 ## Explanation
 
-Explain the score. Clearly identify what your misunderstandings were. Explain why you believe this error/misunderstanding occurred.
+Fine answer, but should clarify more on what those specific observations are (patterns and relationshps between variables) and also provide at least one example. 
 
 ## Updated solution
 
-*Only required if a 3 or less is scored on the question.*
+An empirically driven model makes no assumptions about the form of f(x). It uses **specific observations and characteristics** from data. An empirically driven model is based on statistical relationships between the input and output variables, and the goal is to capture the patterns in the data without necessarily understanding the underlying processes. Examples include KNN, random forests, artificial neural networks.
+Pros: Flexible, better predictive performance and power.
+Cons: need more observations, longer training time, higher risk of overfitting.
 
 :::
 
@@ -238,14 +244,11 @@ Mechanistic models correspond to parametric models, which assume a specific func
 ::: {.callout-important icon="false"}
 
 ## Score 
+5 
 
 ## Explanation
 
-Explain the score. Clearly identify what your misunderstandings were. Explain why you believe this error/misunderstanding occurred.
-
-## Updated solution
-
-*Only required if a 3 or less is scored on the question.*
+No errors or misunderstandings. 
 
 :::
 
@@ -265,14 +268,11 @@ In general, **mechanistic (parametric) models** are easier to interpret because 
 ::: {.callout-important icon="false"}
 
 ## Score 
+5 
 
 ## Explanation
 
-Explain the score. Clearly identify what your misunderstandings were. Explain why you believe this error/misunderstanding occurred.
-
-## Updated solution
-
-*Only required if a 3 or less is scored on the question.*
+No errors or misunderstandings. 
 
 :::
 
@@ -292,14 +292,11 @@ Empirically driven (nonparametric) models are **more** flexible because they do 
 ::: {.callout-important icon="false"}
 
 ## Score 
+5 
 
 ## Explanation
 
-Explain the score. Clearly identify what your misunderstandings were. Explain why you believe this error/misunderstanding occurred.
-
-## Updated solution
-
-*Only required if a 3 or less is scored on the question.*
+No errors or misunderstandings. 
 
 :::
 
@@ -322,14 +319,11 @@ Mechanistic models tend to have **higher bias and lower variance** because their
 ::: {.callout-important icon="false"}
 
 ## Score 
+5
 
 ## Explanation
 
-Explain the score. Clearly identify what your misunderstandings were. Explain why you believe this error/misunderstanding occurred.
-
-## Updated solution
-
-*Only required if a 3 or less is scored on the question.*
+No errors or misunderstandings. 
 
 :::
 
@@ -350,14 +344,11 @@ Regression machine learning problems involve predicting a **continuous** numeric
 ::: {.callout-important icon="false"}
 
 ## Score 
+5 
 
 ## Explanation
 
-Explain the score. Clearly identify what your misunderstandings were. Explain why you believe this error/misunderstanding occurred.
-
-## Updated solution
-
-*Only required if a 3 or less is scored on the question.*
+No errors or misunderstandings. 
 
 :::
 
@@ -378,14 +369,11 @@ Stratifying by the outcome/target variable makes sure that the distribution of t
 ::: {.callout-important icon="false"}
 
 ## Score 
+4 
 
 ## Explanation
 
-Explain the score. Clearly identify what your misunderstandings were. Explain why you believe this error/misunderstanding occurred.
-
-## Updated solution
-
-*Only required if a 3 or less is scored on the question.*
+Correct, but should add that overfitting or underfitting is the precise concern from imbalance. 
 
 :::
 
@@ -410,6 +398,7 @@ The reason why v-fold cross validation is used is because it mimics the training
 ::: {.callout-important icon="false"}
 
 ## Score 
+
 
 ## Explanation
 
@@ -438,14 +427,15 @@ Bootstrap resampling may be more useful when working with **small datasets**, wh
 ::: {.callout-important icon="false"}
 
 ## Score 
+3 
 
 ## Explanation
 
-Explain the score. Clearly identify what your misunderstandings were. Explain why you believe this error/misunderstanding occurred.
+Missing the specific use of bootstrap resampling for obtaining LOWER variance, not just estimating variability. 
 
 ## Updated solution
 
-*Only required if a 3 or less is scored on the question.*
+Bootstrap resampling may be more useful when working with **small datasets**, where splitting into folds may leave too little data for training. It is also helpful when we want our estimate of the test RMSE to have very **low** variance, as bootstrap repeatedly samples with replacement and provides a distribution of performance metrics. We can run many more bootstraps than folds. 
 
 :::
 
@@ -494,14 +484,11 @@ Root Mean Square Error (RMSE) measures the average difference between predicted 
 ::: {.callout-important icon="false"}
 
 ## Score 
+5 
 
 ## Explanation
 
-Explain the score. Clearly identify what your misunderstandings were. Explain why you believe this error/misunderstanding occurred.
-
-## Updated solution
-
-*Only required if a 3 or less is scored on the question.*
+No mistakes or errors. 
 
 :::
 
@@ -524,14 +511,11 @@ Accuracy is the ratio of correct predictions (both positive and negative) to the
 ::: {.callout-important icon="false"}
 
 ## Score 
+5 
 
 ## Explanation
 
-Explain the score. Clearly identify what your misunderstandings were. Explain why you believe this error/misunderstanding occurred.
-
-## Updated solution
-
-*Only required if a 3 or less is scored on the question.*
+No mistakes or errors. 
 
 :::
 
@@ -555,14 +539,11 @@ This is an **inferential** question because it is focused on understanding the r
 ::: {.callout-important icon="false"}
 
 ## Score 
+5 
 
 ## Explanation
 
-Explain the score. Clearly identify what your misunderstandings were. Explain why you believe this error/misunderstanding occurred.
-
-## Updated solution
-
-*Only required if a 3 or less is scored on the question.*
+No mistakes or misunderstandings. 
 
 :::
 
@@ -581,14 +562,11 @@ This is a **predictive** question because the goal is to predict the probability
 ::: {.callout-important icon="false"}
 
 ## Score 
+5 
 
 ## Explanation
 
-Explain the score. Clearly identify what your misunderstandings were. Explain why you believe this error/misunderstanding occurred.
-
-## Updated solution
-
-*Only required if a 3 or less is scored on the question.*
+No mistakes or misunderstandings. 
 
 :::
 
